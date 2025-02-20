@@ -64,7 +64,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-width: 100vh;
+  min-width: 100vw;
 }
 
 h1,
