@@ -323,7 +323,7 @@ header .btn-burger {
   z-index: -1;
   width: 603px;
   height: 603px;
-  background: url(./assets.img/decoration__banner-btn-row.png) center no-repeat;
+  background: url(./assets/img/decoration__banner-btn-row.png) center no-repeat;
   left: 100px;
   top: 0;
   transform: translate(0, -50%);
@@ -355,7 +355,7 @@ header .btn-burger {
   z-index: -1;
   width: 479px;
   height: 479px;
-  background: url(./assets.img/decoration__banner-light-img.png) center no-repeat;
+  background: url(./assets/img/decoration__banner-light-img.png) center no-repeat;
   left: -160px;
   top: 160px;
   transform: translate(0, -50%);
@@ -370,7 +370,7 @@ header .btn-burger {
   z-index: -1;
   width: 676px;
   height: 676px;
-  background: url(./assets.img/decoration__banner-light-img_md.png) center no-repeat;
+  background: url(./assets/img/decoration__banner-light-img_md.png) center no-repeat;
   left: -50px;
   top: calc(100% - 115px);
   transform: translate(0, -50%);
