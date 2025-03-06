@@ -65,6 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1,
@@ -376,9 +377,13 @@ header .btn-burger {
   transform: translate(0, -50%);
 }
 .banner .banner-discount {
-  width: 184px;
-  height: 184px;
-  background: url(./assets/img/bg-discount.svg) center no-repeat;
+  --max-size: 184px;
+  --size: 14.154vw;
+  width: var(--size);
+  height: var(--size);
+  max-width: var(--max-size);
+  max-height: var(--max-size);
+  background: url(./assets/img/bg-discount.svg) center/100% no-repeat;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -403,6 +408,15 @@ header .btn-burger {
   z-index: -1;
 }
 
+.banner-line {
+  width: 1102px;
+  height: 677px;
+  position: absolute;
+  top: 200px;
+  right: -470px;
+  z-index: -1;
+}
+
 /* &:before {
     content: "";
     position: absolute;
@@ -418,6 +432,7 @@ header .btn-burger {
   padding: 50px 78px 36px;
   border-radius: 46px;
   background: linear-gradient(230deg, #fff 3.94%, #e5e5e5 64.08%, #fbfbfb 88.62%);
+  height: 372px;
 }
 
 .footer {
@@ -545,12 +560,27 @@ header .btn-burger {
     display: none;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1025px) {
+  .btn-burger {
+    display: none;
+  }
+}
+@media screen and (max-width: 1399.99px) {
+  .banner h1 {
+    font-size: 4.5rem;
+    margin-bottom: 54px;
+  }
+}
+@media screen and (max-width: 1199.99px) {
+  .banner h1 {
+    font-size: 4rem;
+    margin-bottom: 48px;
+  }
   .footer-nav {
     max-width: 650px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024.99px) {
   header {
     padding: 34px 0;
   }
@@ -602,6 +632,10 @@ header .btn-burger {
   }
   .btn .btn-outline svg {
     height: 22px;
+  }
+  .banner .container {
+    flex-direction: column-reverse;
+    align-items: center;
   }
   .footer {
     padding: 37px 0 7px;
