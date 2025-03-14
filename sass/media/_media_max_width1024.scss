@@ -1,0 +1,177 @@
+@media screen and (max-width: 1024.99px) {
+    header {
+        padding: 29px 0;
+
+        > .container {
+            gap: 0;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 97px;
+            background-color: $bg-color;
+            z-index: 1;
+        }
+    }
+
+    .container {
+        padding: 0 25px;
+    }
+
+    .header-logo {
+        max-width: 114px;
+    }
+
+    .mobile-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #080C0D;
+        padding: 25px 25px 75px;
+        background-image: linear-gradient(245deg, rgba(35, 114, 73, 0.32) 0%, rgba(53, 198, 107, 0.32) 51.85%);
+        backdrop-filter: blur(3px);
+        transition: .3s;
+        visibility: hidden;
+        transform: translate(0, -100%);
+
+        &.show {
+            top: 97px;
+            transform: translate(0, 0);
+            visibility: visible;
+        }
+    }
+    
+
+    .menu__list {
+        gap: 48px;
+        flex-direction: column;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 17px 24px;
+
+        .btn-outline {
+        width: 52px;
+        height: 52px;
+        border-radius: 18px;
+
+        svg {
+            height: 22px;
+        }
+    }
+}
+
+    .banner {
+        .container {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: min(9vw, 64px);
+            margin-bottom: 36px;
+        }
+
+        .banner-discription {
+            margin-bottom: 36px;
+            font-size: 0.75rem;
+        }
+
+        &-btn-group {
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+
+        .banner-img {
+            padding: 0 60px;
+            margin-right: 0;
+        }
+
+        .banner-img:after {
+            display: none;
+        }
+
+    
+
+        .banner-img:before {
+            display: none;
+        }
+
+        .banner-img .banner-line {
+            height: auto;
+            right: -23.7vw;
+            top: 114px;
+            width: 120%;
+        }
+
+        &-statistic-item {
+            width: auto;
+        }
+
+        .banner-statistic__title {
+            font-size: 42px;
+        }
+
+        .banner-statistic__subtitle {
+            font-size: 12px;
+        }
+    }
+
+    .accent-label {
+        right: 100px;
+    }
+
+    .footer {
+        padding: 37px 0 7px;
+
+        &-logo {
+            max-width: 135px;
+        }
+
+        &-nav {
+            order: 1;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 28px;
+            padding: 38px 0 32px;
+        }
+    
+        &-row {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            .btn {
+            margin-left: auto;
+        }  
+    }
+
+    .footer-nav__title,
+    .footer-nav__link {
+        font-size: 15px;
+    }
+
+    .footer-nav__column {
+        padding: 0;
+    }
+
+    .footer-phones__item {
+        font-size: 16px;
+    }
+
+    .footer-social__item {
+        height: 34px;
+        width: 34px;
+    }
+
+    .btn {
+        margin-top: 17px;
+    }
+   
+  }
+}
