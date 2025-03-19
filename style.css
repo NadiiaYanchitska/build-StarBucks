@@ -161,6 +161,7 @@ button {
   transition: 0.3s;
   position: relative;
   display: inline-flex;
+  align-items: center;
 }
 .btn:after {
   content: "";
@@ -307,9 +308,10 @@ header {
   position: relative;
 }
 header > .container {
+  --gap: 94px;
   display: flex;
   align-items: center;
-  gap: 94px;
+  gap: var(--gap);
   position: relative;
 }
 header > .container::before {
@@ -336,9 +338,20 @@ header .btn-burger {
   z-index: 1;
 }
 
+.mobile-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  z-index: 2;
+}
+.mobile-container .btn {
+  margin-left: auto;
+}
+
 .menu__list {
   display: flex;
-  gap: 94px;
+  gap: var(--gap);
 }
 .menu__link {
   font-size: 20px;
@@ -619,7 +632,6 @@ header .btn-burger {
 
 .we-make__process {
   position: relative;
-  background: url(./assets/img/we-make___cooking.png) center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -825,6 +837,9 @@ header .btn-burger {
   }
 }
 @media screen and (max-width: 1199.99px) {
+  header > .container {
+    --gap: 72px;
+  }
   .banner .template-title {
     margin-bottom: 42px;
   }
@@ -874,11 +889,15 @@ header .btn-burger {
     transition: 0.3s;
     visibility: hidden;
     transform: translate(0, -100%);
+    flex-direction: column;
   }
   .mobile-container.show {
-    top: 97px;
+    top: 48px;
     transform: translate(0, 0);
     visibility: visible;
+  }
+  .mobile-container .btn {
+    margin-left: initial;
   }
   .menu__list {
     gap: 48px;
