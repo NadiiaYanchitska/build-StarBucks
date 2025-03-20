@@ -298,6 +298,30 @@ button {
   overflow: hidden;
 }
 
+.g-0 {
+  gap: 0;
+}
+
+.g-1 {
+  gap: 1rem;
+}
+
+.g-2 {
+  gap: 2rem;
+}
+
+.g-3 {
+  gap: 3rem;
+}
+
+.g-4 {
+  gap: 4rem;
+}
+
+.g-5 {
+  gap: 5rem;
+}
+
 ::selection {
   color: #121517;
   background-color: #237249;
@@ -674,6 +698,7 @@ header .btn-burger {
   height: 0;
   width: 0;
   transform: 0.3s;
+  cursor: pointer;
 }
 .overlay.show {
   height: 100vh;

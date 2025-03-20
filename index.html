@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="overlay"></div>
+    <div class="overlay" data-modal-close></div>
     <header id="header">
         <div class="container">
             <a href="index.html" class="header-logo">
@@ -28,7 +28,7 @@
                     </ul>
                 </nav>
 
-                <button class="btn btn-secondary" data-triger-modal="process">Зворотній зв'язок</button>
+                <button class="btn btn-secondary" data-triger-modal="feedback">Зворотній зв'язок</button>
             </div>
             <button id="btn-burger" class="btn btn-burger">
                 <span></span>
@@ -37,6 +37,7 @@
             </button>
         </div>
     </header>
+
 
     <main class="wrapper home">
         <section class="banner">
@@ -51,7 +52,7 @@
                     </div>
                     <ul class="banner-statistics">
                         <li class="banner-statistic-item">
-                            <div class="banner-statistic__title">9k<span class="gradient-text">+</span></div>
+                            <div class="banner-statistic__title" data-triger-modal="feedback">9k<span class="gradient-text">+</span></div>
                             <div class="banner-statistic__subtitle">Premium Users</div>
                         </li>
                         <li class="banner-statistic-item">
@@ -200,11 +201,12 @@
 			   </svg>
 		   </a>
             </div>
-            <address class="footer-contacts">
+            <address class="footer-contacts g-3">
                 <nav class="footer-phones">
                     <a href="tel:+39999999999" class="footer-phones__item">+38(099)-999-99-99</a>
                 </nav>
-
+                <a href="#" class="btn btn-secondary" data-triger-modal="qwerty">qwerty</a>
+                <a href="#" class="btn btn-secondary" data-triger-modal="process">Process</a>
                 <nav class="footer-social">
                     <a href="#" class="footer-social__item">
 				   <img src="./assets/img/icon-instagram.svg" alt="instagram">
@@ -228,12 +230,32 @@
         </symbol>
     </svg>
 
-    <div class="modal">
+    <div id="process" class="modal">
+        <div data-modal-close>x</div>
         <div class="modal-content">
+            <h2>Process</h2>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, unde? Debitis corrupti quod culpa nobis sed accusantium doloremque deleniti rem placeat quia quam voluptatem distinctio aut voluptatum temporibus ducimus, delectus harum eos dolorum architecto? Eos ullam id saepe ea fugit distinctio earum, accusamus, possimus aperiam obcaecati illo nulla voluptate. Ipsam.
         </div>
-        <button class="btn btn-secondary" data-modal="close" type="button">close</button>
+        <button class="btn btn-secondary" data-modal-close>close</button>
     </div>
+
+    <div id="feedback" class="modal">
+        <div class="modal-content">
+            <h2>feedback</h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, unde? Debitis corrupti quod culpa nobis sed accusantium doloremque deleniti rem placeat quia quam voluptatem distinctio aut voluptatum temporibus ducimus, delectus harum eos dolorum architecto? Eos ullam id saepe ea fugit distinctio earum, accusamus, possimus aperiam obcaecati illo nulla voluptate. Ipsam.
+        </div>
+        <button class="btn btn-secondary" data-modal-close>close</button>
+    </div>
+
+
+    <div id="qwerty" class="modal">
+        <div class="modal-content">
+            <h2>qwerty</h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, unde? Debitis corrupti quod culpa nobis sed accusantium doloremque deleniti rem placeat quia quam voluptatem distinctio aut voluptatum temporibus ducimus, delectus harum eos dolorum architecto? Eos ullam id saepe ea fugit distinctio earum, accusamus, possimus aperiam obcaecati illo nulla voluptate. Ipsam.
+        </div>
+        <button class="btn btn-secondary" data-modal-close>close</button>
+    </div>
+
     <script src="assets/js/custom.js"></script>
 </body>
 
