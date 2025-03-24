@@ -152,7 +152,7 @@ button {
 .btn {
   color: #fff;
   font-size: 24px;
-  border-radius: 50px;
+  border-radius: 25px;
   border: none;
   text-decoration: none;
   padding: 23px 54px;
@@ -162,6 +162,15 @@ button {
   position: relative;
   display: inline-flex;
   align-items: center;
+}
+.btn.btn-close {
+  top: 0;
+  right: 0;
+  background: #35C66B;
+  position: absolute;
+  border-radius: 50px;
+  font-size: 30px;
+  cursor: pointer;
 }
 .btn:after {
   content: "";
@@ -296,6 +305,14 @@ button {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+.d-flex h3 {
+  line-height: 1;
 }
 
 .g-0 {
@@ -716,6 +733,8 @@ header .btn-burger {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
+  max-width: 991px;
+  width: 100%;
 }
 .modal.show {
   opacity: 1;
@@ -724,6 +743,10 @@ header .btn-burger {
 
 .modal-content {
   margin-bottom: 24px;
+}
+.modal-content video {
+  width: 100%;
+  padding: 50px;
 }
 
 .footer {
@@ -1025,6 +1048,9 @@ header .btn-burger {
   .advantage__description {
     font-size: 0.75rem;
     margin-bottom: 0;
+  }
+  .we-make .container {
+    flex-direction: column;
   }
   .footer {
     padding: 37px 0 7px;
