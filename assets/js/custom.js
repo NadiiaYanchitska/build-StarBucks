@@ -132,3 +132,58 @@ if (x == 2) {
     console.log('не задовільняє жодних умов');
 }
 
+const swiperProduct = new Swiper('.swiper-product', {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 48,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+
+        1026: {
+            slidesPerView: 2,
+            spaceBetween: 48,
+          },
+
+        1215: {
+          slidesPerView: 3,
+          spaceBetween: 48,
+        },
+
+        1560: {
+          slidesPerView: 4,
+          spaceBetween: 48,
+        }
+    }
+  });
+
+swiperEvents = new Swiper(".swiper-events", {
+    loop: true,
+    spaceBetween: 24,
+    navigation: {
+        nextEl: '.swiper-events-button-next',
+        prevEl: '.swiper-events-button-prev',
+    },
+});
+
+// MOBILE ONLY
+const swiperEventsMediaQuery = window.matchMedia("(max-width: 1025px)");
+
+function checkedBreakpoint(swiperEventsMediaQuery) {
+    if (swiperEventsMediaQuery.matches) {
+         return;
+    } else {
+          swiperEvents.destroy();
+    }
+}
+
+checkedBreakpoint(swiperEventsMediaQuery);
+
+//window.addEventListener('resize', {checkedBreakpoint(swiperEventsMediaQuery);});
